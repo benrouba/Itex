@@ -1,1 +1,282 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+// ****************************************************************************Font-family***************************************************************************************
+@font-face {
+  font-family: poppinsRegular;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppinsSemiBold;
+  src: url(assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: poppinsMeduim;
+  src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+.poppinsRegular {
+  font-family: poppinsRegular;
+}
+
+.poppinsMeduim {
+  font-family: poppinsMeduim;
+}
+
+.poppinsSemiBold {
+  font-family: poppinsSemiBold;
+}
+
+// **************************************************************************** variavles ***************************************************************************************
+$deepBlue: #192252;
+$grey: #848FAC;
+$grey_2: #C5D0E6;
+$black_2: #2B2B36;
+$black: #000000;
+$azure: #00B0F0;
+$lightBlue: #65A8FB;
+$opacity_05: 0.5;
+$border: 1px solid $grey_2;
+
+// ****************************************************************************colors***************************************************************************************
+.deepBlue {
+  color: $deepBlue !important;
+}
+
+.blackColor {
+  color: $black_2;
+}
+
+.black {
+  color: $black;
+}
+
+.greyColor {
+  color: $grey;
+}
+
+.grey_2 {
+  color: $grey_2;
+}
+
+// ****************************************************************************background  ***************************************************************************************
+.blueBack {
+  background-color: $deepBlue;
+}
+
+.img_back {
+  background-image: url(assets/images/backgrounds/Maskgroup.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: $azure;
+  overflow: hidden;
+}
+
+// ****************************************************************************borders***************************************************************************************
+.border_1 {
+  border: $border !important;
+}
+
+.border_2 {
+  border-bottom: $border !important;
+}
+
+.border_3 {
+  border-right: $border !important;
+}
+
+// ****************************************************************************Font-size***************************************************************************************
+.f32 {
+  font-size: 32px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+// ****************************************************************************Buttons***************************************************************************************
+.custom_btn {
+  height: 48px !important;
+  border-radius: 8px !important;
+}
+
+// ****************************************************************************Common Css ***************************************************************************************
+a {
+  text-decoration: none !important;
+}
+
+// ****************************************************************************images ***************************************************************************************
+.img-1 {
+  z-index: 10000;
+}
+
+.img-2 {
+  transform: translate(71%, 50%);
+  z-index: 1;
+}
+
+// ****************************************************************************Input***************************************************************************************
+::placeholder {
+  color: $grey_2;
+}
+
+.form-control {
+  @extend .custom_btn;
+  @extend .border_1;
+}
+
+// ****************************************************************************Customisation***************************************************************************************
+.otp-input {
+  @extend .border_1;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 8px !important;
+  color: $deepBlue !important;
+  font-family: poppinsRegular !important;
+  margin-right: 20px !important;
+
+  &:focus-visible {
+    border: 1px solid $lightBlue !important;
+    outline: none;
+  }
+}
+
+// ****************************************************************************opacity  ***************************************************************************************
+.opaity_05 {
+  opacity: $opacity_05;
+}
+
+// ****************************************************************************link active  ***************************************************************************************
+
+.router-link-active {
+  opacity: 1 !important;
+  background: #EFF3FA;
+  border-radius: 5px;
+}
+
+// ****************************************************************************Tables ***************************************************************************************
+.tableContainer {
+  border: $border;
+  border-radius: 12px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+thead tr {
+  font-family: poppinsRegular;
+  font-size: 14px;
+  color: $deepBlue;
+  background: #EFF3FA;
+  border-radius: 12px
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+// ****************************************************************************Media queries***************************************************************************************
+@media (min-width:1440px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}
+
+@media (max-width:991.99px) {
+  .f32 {
+    font-size: 16px;
+  }
+
+  .icons {
+    width: 24px;
+    height: 24px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  .sidenav {
+    box-shadow: 0px 38px 81px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .otp-input {
+    width: 45px !important;
+    height: 45px !important;
+    margin-right: 8px !important;
+  }
+}
+
+// ****************************************************************************Paginator***************************************************************************************
+
+.pagination .page-item.active .page-link {
+  background: #EFF3FA;
+  border-radius: 8px;
+  opacity: 1;
+  color: $deepBlue
+}
+
+.pagination .pagination-page .page-link,
+.pagination .pagination-next .page-link,
+.pagination .pagination-prev .page-link {
+  margin-right: .5rem;
+  // color: #A9B4CD;
+  border: unset !important;
+  font-size: 16px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.pagination .pagination-next .page-link,
+.pagination .pagination-prev .page-link {
+  color: $deepBlue
+}
+
+.pagination .pagination-page .page-link {
+  color: #A9B4CD;
+}

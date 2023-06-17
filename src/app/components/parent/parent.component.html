@@ -1,0 +1,84 @@
+<div class="mainContainer">
+  <app-header></app-header>
+  <div class="row no-gutters content">
+    <div class="overlay" (click)="closeNav()" id="overlay">
+    </div>
+    <div class="col-md-4 col-lg-3 col-xl-2 p-0 border_3">
+      <div id="mySidenav" class="sidenav position-md-unset">
+        <ul class="navbar-nav flex-column w-100 poppinsRegular">
+          <div class="mb-4">
+            <div class="d-flex px-3 align-items-end">
+              <button class="btn p-0 mr-3" (click)="closeNav()">
+                <img src="../../../assets/images/icons/Frame.svg" alt="">
+              </button>
+              <a [routerLink]="['/']">
+                <img src="../../../assets/images/icons/Group 33524.svg" alt="" class="logo">
+              </a>
+            </div>
+            <li class="nav-item px-3">
+              <a class="nav-link deepBlue px-3  py-3" [routerLink]="['/profile']" routerLinkActive="router-link-active">
+                <img src="../../../assets/images/icons/Avatar.png" alt="" class="mr-2 avatar">
+                <span class="opaity_05">Edit My Profile</span>
+              </a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link deepBlue px-3 py-3 d-flex align-items-center" [routerLink]="['/notification']"
+                routerLinkActive="router-link-active">
+                <img src="../../../assets/images/icons/Setting.svg" alt="" class="mr-2">
+                <span class="opaity_05 mr-2">Notifications</span>
+                <div class="badge text-white f12">2</div>
+              </a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link deepBlue px-3 py-3 d-flex align-items-center" [routerLink]="['/notification']"
+                routerLinkActive="router-link-active">
+                <img src="../../../assets/images/icons/Setting.svg" alt="" class="mr-2">
+                <span class="opaity_05">Settings</span>
+              </a>
+            </li>
+          </div>
+          <li class="nav-item px-3 mb-2">
+            <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/dashboard']"
+              routerLinkActive="router-link-active">
+              <img src="../../../assets/images/icons/Chart.svg" alt="" class="mr-2">
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item px-3 mb-2">
+            <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/my-patients']"
+              routerLinkActive="router-link-active">
+              <img src="../../../assets/images/icons/3 User.svg" alt="" class="mr-2">
+              Patients list
+            </a>
+          </li>
+          <li class="nav-item px-3 mb-2">
+            <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/messages']"
+              routerLinkActive="router-link-active">
+              <img src="../../../assets/images/icons/Chat.svg" alt="" class="mr-2">
+              Messages
+            </a>
+          </li>
+          <li class="nav-item px-3 mb-2">
+            <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/appointment']"
+              routerLinkActive="router-link-active">
+              <img src="../../../assets/images/icons/Calendar.svg" alt="" class="mr-2">
+              Appointment
+            </a>
+          </li>
+          <li class="nav-item px-3 mb-2">
+            <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/medical-history']"
+              routerLinkActive="router-link-active">
+              <img src="../../../assets/images/icons/Activity.svg" alt="" class="mr-2">
+              Medical History
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8 col-lg-9 col-xl-10 h-100">
+      <div id="main" class="p-3 p-md-4 px-lg-5 py-lg-3">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
