@@ -36,8 +36,12 @@ body {
 
 // **************************************************************************** variavles ***************************************************************************************
 $deepBlue: #192252;
+$blue: #103F74;
+$blue_2: #2B7BAE;
 $grey: #848FAC;
 $grey_2: #C5D0E6;
+$grey_3: #EFF3FA;
+$grey_4: #FAFAFA;
 $black_2: #2B2B36;
 $black: #000000;
 $azure: #00B0F0;
@@ -54,6 +58,10 @@ $border: 1px solid $grey_2;
   color: $black_2;
 }
 
+.greyBack_4 {
+  background-color: $grey_4 ;
+}
+
 .black {
   color: $black;
 }
@@ -66,9 +74,21 @@ $border: 1px solid $grey_2;
   color: $grey_2;
 }
 
+.blue_2 {
+  color: $blue_2 !important;
+}
+
 // ****************************************************************************background  ***************************************************************************************
 .blueBack {
   background-color: $deepBlue;
+}
+
+.blueBack_2 {
+  background-color: $blue;
+}
+
+.greyBack {
+  background-color: $grey_3;
 }
 
 .img_back {
@@ -91,6 +111,15 @@ $border: 1px solid $grey_2;
 
 .border_3 {
   border-right: $border !important;
+}
+
+// ****************************************************************************Border radius***************************************************************************************
+.br12 {
+  border-radius: 12px;
+}
+
+.br8 {
+  border-radius: 8px !important;
 }
 
 // ****************************************************************************Font-size***************************************************************************************
@@ -241,6 +270,11 @@ tr:last-child th:last-child {
 
   .sidenav {
     box-shadow: 0px 38px 81px rgba(0, 0, 0, 0.25);
+  }
+
+  .coverImg {
+    height: 135px !important;
+    background-size: cover;
   }
 }
 
