@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent {
-
+  openNav() {
+    (<HTMLInputElement>document.getElementById("mySidenav")).style.width = "250px";
+    (<HTMLInputElement>document.getElementById("overlay")).classList.add('active')
+  }
 
   closeNav() {
     (<HTMLInputElement>document.getElementById("mySidenav")).style.width = "0";

@@ -5,6 +5,8 @@ import { HttpClient, HttpClientModule, } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // ************************************************************************ngx bootstrap ************************************************************************
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+// *******************************************************Chart Module*******************************************************
+import { NgChartsModule } from 'ng2-charts';
 
 // ************************************************************************Tools************************************************************************
 
@@ -27,6 +29,7 @@ import { MedicalHistoryComponent } from './components/parent/medical-history/med
 import { ProfileComponent } from './components/parent/profile/profile.component';
 import { MyPatientsComponent } from './components/parent/my-patients/my-patients.component';
 import { HeaderComponent } from './reusable/header/header.component';
+import { SideNavComponent } from './reusable/side-nav/side-nav.component';
 
 
 const routes: Routes = [
@@ -72,7 +75,8 @@ const routes: Routes = [
     MedicalHistoryComponent,
     MyPatientsComponent,
     ProfileComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +87,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgChartsModule
 
   ],
   providers: [authGuard],
