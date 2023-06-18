@@ -1,0 +1,36 @@
+<div class="row no-gutters" *ngIf="users">
+  <div class="col-lg-5 col-xl-4 p-3 p-md-4 border_3">
+    <span class="deepBlue f24 poppinsSemiBold">Message</span>
+    <div class="form-group mt-4 mb-5">
+      <input type="email" class="form-control f14 " id="email" placeholder="Search for something">
+    </div>
+    <div>
+      <div *ngFor="let user of users.users" class="d-flex justify-content-between align-items-start mb-4">
+        <div class="d-flex align-items-center">
+          <img src="{{user.image}}" alt="" class="userImg mr-3">
+          <div class="">
+            <div class="deepBlue f14 poppinsSemiBold d-block">{{user.firstName}} {{user.lastName}}</div>
+            <div class="greyColor f14 poppinsRegular mt-2">Hi how are you?</div>
+          </div>
+        </div>
+        <span class="greyColor f14 poppinsRegular">12:45PM</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-7 col-xl-8">
+    <div class="d-flex justify-content-between align-items-center p-4 border_2">
+      <div class="d-flex align-items-center">
+        <img src="{{users.users[0].image}}" alt="" class="userImg mr-3">
+        <div class="">
+          <div class="deepBlue f14 poppinsSemiBold d-block">{{users.users[0].firstName}} {{users.users[0].lastName}}
+          </div>
+          <div class="greyColor f14 poppinsRegular mt-2">Contact</div>
+        </div>
+      </div>
+      <div>
+        <button class="btn p-0"><img src="../../../../assets/images/icons/Video.svg" class="mr-4" alt=""></button>
+        <button class="btn p-0"><img src="../../../../assets/images/icons/More Circle.svg" alt=""></button>
+      </div>
+    </div>
+  </div>
+</div>
