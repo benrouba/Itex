@@ -38,6 +38,7 @@ body {
 $deepBlue: #192252;
 $blue: #103F74;
 $blue_2: #2B7BAE;
+$blue_3: #1A71FF;
 $grey: #848FAC;
 $grey_2: #C5D0E6;
 $grey_3: #EFF3FA;
@@ -78,6 +79,10 @@ $border: 1px solid $grey_2;
   color: $blue_2 !important;
 }
 
+.blue_3 {
+  color: $blue_3 !important;
+}
+
 // ****************************************************************************background  ***************************************************************************************
 .blueBack {
   background-color: $deepBlue;
@@ -116,6 +121,10 @@ $border: 1px solid $grey_2;
 // ****************************************************************************Border radius***************************************************************************************
 .br12 {
   border-radius: 12px;
+}
+
+.br10 {
+  border-radius: 10px;
 }
 
 .br8 {
@@ -214,7 +223,7 @@ table {
   border-spacing: 0 10px;
 }
 
-thead tr {
+.customTr {
   font-family: poppinsRegular;
   font-size: 14px;
   color: $deepBlue;
@@ -252,6 +261,10 @@ tr:last-child th:last-child {
 @media (max-width:991.99px) {
   .f32 {
     font-size: 16px;
+  }
+
+  .customBorder {
+    border: none !important;
   }
 
   .icons {
@@ -313,4 +326,60 @@ tr:last-child th:last-child {
 
 .pagination .pagination-page .page-link {
   color: #A9B4CD;
+}
+
+// ****************************************************************************styling Calendar***************************************************************************************
+.cssClass {
+  color: $deepBlue !important;
+  font-family: "poppinsRegular";
+}
+
+bs-datepicker-inline-container,
+.bs-datepicker,
+.bs-datepicker-container,
+.bs-calendar-container,
+bs-days-calendar-view,
+.bs-media-container {
+  width: 100% !important;
+}
+
+.bs-datepicker-container {
+  padding: 0 !important;
+}
+
+.bs-datepicker-body table td {
+  @extend .cssClass;
+  font-size: 16px !important;
+
+  & span.selected {
+    background-color: #fff !important;
+    color: $deepBlue !important;
+  }
+}
+
+.bs-datepicker-body table th {
+  @extend .cssClass;
+  font-size: 11px !important;
+}
+
+.bs-datepicker-head button.current,
+.bs-datepicker-head button.next,
+.bs-datepicker-head button.previous {
+  @extend .cssClass;
+  font-size: 12px;
+}
+
+.theme-green .bs-datepicker-head {
+  @extend .cssClass;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+.bs-datepicker-body {
+  border: unset !important;
+  border-top: 1px solid $grey_2 !important;
+}
+
+.bs-datepicker {
+  box-shadow: unset !important;
 }

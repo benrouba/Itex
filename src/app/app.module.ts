@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from "@angular/router";
 import { HttpClient, HttpClientModule, } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ************************************************************************ngx bootstrap ************************************************************************
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 // *******************************************************Chart Module*******************************************************
 import { NgChartsModule } from 'ng2-charts';
 
@@ -90,7 +92,9 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgChartsModule
+    NgChartsModule,
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule
 
   ],
   providers: [authGuard],

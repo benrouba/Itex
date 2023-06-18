@@ -2,7 +2,7 @@
 </div>
 <div id="mySidenav" class="sidenav position-md-unset" [ngClass]="{'d-lg-none': !display}">
   <ul class="navbar-nav flex-column w-100 poppinsRegular">
-    <div class="mb-4">
+    <div class="mb-2 d-lg-none">
       <div class="d-flex px-3 align-items-end">
         <button class="btn p-0 mr-3" (click)="closeNav()">
           <img src="../../../assets/images/icons/Frame.svg" alt="">
@@ -33,7 +33,7 @@
         </a>
       </li>
     </div>
-    <li class="nav-item px-3 mb-2">
+    <li class="nav-item px-3 my-2">
       <a class="nav-link deepBlue opaity_05 p-3" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
         <img src="../../../assets/images/icons/Chart.svg" alt="" class="mr-2">
         Dashboard
