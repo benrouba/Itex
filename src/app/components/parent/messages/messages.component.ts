@@ -8,12 +8,14 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class MessagesComponent implements OnInit {
   users: any
+  user: any
+  display: boolean = true
   constructor(private http: HttpService) { }
   ngOnInit(): void {
     this.getUsers()
   }
   getUsers() {
-    this.http.get("users?limit=9").subscribe((res: any) => {
+    this.http.get("users?limit=8").subscribe((res: any) => {
       if (res.status == 200) {
         console.log('====================================');
         console.log(res);
@@ -21,5 +23,9 @@ export class MessagesComponent implements OnInit {
         console.log('====================================');
       }
     })
+  }
+  selectedUser(user: any) {
+    this.user = user
+    this.display = false
   }
 }

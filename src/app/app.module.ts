@@ -36,6 +36,7 @@ import { HeaderComponent } from './reusable/header/header.component';
 import { SideNavComponent } from './reusable/side-nav/side-nav.component';
 import { PatientDetailsComponent } from './components/parent/my-patients/patient-details/patient-details.component';
 import { MessagesComponent } from './components/parent/messages/messages.component';
+import { MessageDetailsComponent } from './components/parent/messages/message-details/message-details.component';
 
 
 const routes: Routes = [
@@ -63,7 +64,11 @@ const routes: Routes = [
       { path: "dashboard", component: DashboardComponent },
       { path: "medical-history", component: MedicalHistoryComponent },
       { path: "my-patients", component: MyPatientsComponent },
-      { path: "messages", component: MessagesComponent },
+      {
+        path: "messages", component: MessagesComponent, children: [{
+          path: "message-details/:id", component: MessageDetailsComponent
+        }]
+      },
       { path: "my-patients/patient-details/:id", component: PatientDetailsComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     ]
@@ -86,7 +91,8 @@ const routes: Routes = [
     HeaderComponent,
     SideNavComponent,
     PatientDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    MessageDetailsComponent
   ],
   imports: [
     BrowserModule,

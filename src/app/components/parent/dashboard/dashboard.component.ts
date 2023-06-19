@@ -18,9 +18,20 @@ export class DashboardComponent implements OnInit {
     plugins: {
       tooltip: {
         backgroundColor: "#192252",
+        displayColors: false,
+        yAlign: 'bottom',
+        padding: {
+          left: 15,
+          right: 15,
+          top: 10,
+          bottom: 10
+        },
         titleFont: {
           size: 14,
           family: "poppinsRegular",
+        },
+        callbacks: {
+          title: () => null // or function () { return null; }
         }
       },
       legend: {

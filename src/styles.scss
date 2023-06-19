@@ -43,6 +43,8 @@ $grey: #848FAC;
 $grey_2: #C5D0E6;
 $grey_3: #EFF3FA;
 $grey_4: #FAFAFA;
+$grey_5: #A9B4CD;
+$grey_6: #DFE8F6;
 $black_2: #2B2B36;
 $black: #000000;
 $azure: #00B0F0;
@@ -57,6 +59,10 @@ $border: 1px solid $grey_2;
 
 .blackColor {
   color: $black_2;
+}
+
+.greyBack_6 {
+  background-color: $grey_6;
 }
 
 .greyBack_4 {
@@ -88,8 +94,12 @@ $border: 1px solid $grey_2;
   background-color: $deepBlue;
 }
 
-.blueBack_2 {
-  background-color: $blue;
+.blueBack {
+  background-color: $deepBlue;
+}
+
+.grey_kBack {
+  background-color: $grey_5;
 }
 
 .greyBack {
@@ -131,6 +141,14 @@ $border: 1px solid $grey_2;
   border-radius: 8px !important;
 }
 
+.br012 {
+  border-radius: 0px 12px 12px 12px;
+}
+
+.br120 {
+  border-radius: 12px 12px 0px 12px;
+}
+
 // ****************************************************************************Font-size***************************************************************************************
 .f32 {
   font-size: 32px;
@@ -158,6 +176,14 @@ $border: 1px solid $grey_2;
   border-radius: 8px !important;
 }
 
+.sendBtn {
+  background-color: $blue;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+}
+
 // ****************************************************************************Common Css ***************************************************************************************
 a {
   text-decoration: none !important;
@@ -171,6 +197,20 @@ a {
 .img-2 {
   transform: translate(71%, 50%);
   z-index: 1;
+}
+
+.userImg {
+  width: 56px;
+  height: 56px;
+  background-color: #DFE8F6;
+  border-radius: 50%;
+}
+
+.SmallUserImg {
+  width: 40px;
+  height: 40px;
+  background-color: #DFE8F6;
+  border-radius: 50%;
 }
 
 // ****************************************************************************Input***************************************************************************************
@@ -197,6 +237,10 @@ a {
     border: 1px solid $lightBlue !important;
     outline: none;
   }
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 // ****************************************************************************opacity  ***************************************************************************************
