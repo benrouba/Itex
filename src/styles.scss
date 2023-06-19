@@ -133,6 +133,22 @@ $border: 1px solid $grey_2;
   border-right: $border !important;
 }
 
+.border_4 {
+  border-left: 4px solid #12BDB2 !important;
+  border-radius: 6px !important;
+}
+
+.border_5 {
+  border-left: 4px solid #8239BC !important;
+  border-radius: 4px !important;
+}
+
+.border_6 {
+  border-left: 4px solid #FBB500 !important;
+  border-radius: 4px !important;
+
+}
+
 // ****************************************************************************Border radius***************************************************************************************
 .br12 {
   border-radius: 12px;
@@ -438,4 +454,68 @@ bs-days-calendar-view,
 
 .bs-datepicker {
   box-shadow: unset !important;
+}
+
+// ****************************************************************************styling FullCalendar***************************************************************************************
+
+full-calendar h2 {
+  font-family: 'poppinsRegular';
+  text-transform: capitalize !important;
+}
+
+full-calendar .fc-col-header-cell-cushion {
+  font-family: 'poppinsRegular';
+  color: $deepBlue;
+  font-size: 14px !important;
+}
+
+full-calendar .fc-scrollgrid-shrink-cushion {
+  font-family: 'poppinsRegular';
+}
+
+full-calendar {
+  background-color: #fff !important;
+}
+
+full-calendar .fc-button:focus {
+  box-shadow: unset !important;
+}
+
+full-calendar .fc-event-title {
+  font-family: 'poppinsRegular' !important;
+}
+
+full-calendar .fc-daygrid-day-number {
+  font-family: 'poppinsRegular';
+}
+
+full-calendar tbody>tr:hover {
+  -webkit-animation: unset !important;
+  animation: unset !important;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border: 1px solid transparent !important;
+}
+
+tr .fc-day-today {
+  background: #FFF !important;
+}
+
+.fc .fc-button-primary,
+.fc .fc-button-primary:hover {
+  background-color: #fff !important;
+  color: $deepBlue !important;
+}
+
+.fc .fc-button-group>.fc-button {
+  @extend .border_1
+}
+
+.fc .fc-button-primary:disabled,
+.fc .fc-button:not(:disabled) {
+  border: unset !important;
+  font-family: 'poppinsSemiBold' !important;
+  font-size: 18px !important;
+  text-transform: capitalize
 }
