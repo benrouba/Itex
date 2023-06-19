@@ -39,6 +39,7 @@ $deepBlue: #192252;
 $blue: #103F74;
 $blue_2: #2B7BAE;
 $blue_3: #1A71FF;
+$blue_4: #3EA2D0;
 $grey: #848FAC;
 $grey_2: #C5D0E6;
 $grey_3: #EFF3FA;
@@ -87,6 +88,10 @@ $border: 1px solid $grey_2;
 
 .blue_3 {
   color: $blue_3 !important;
+}
+
+.blue_4 {
+  color: $blue_4 !important;
 }
 
 // ****************************************************************************background  ***************************************************************************************
@@ -158,6 +163,10 @@ $border: 1px solid $grey_2;
   font-size: 32px;
 }
 
+.f36 {
+  font-size: 36px;
+}
+
 .f20 {
   font-size: 20px;
 }
@@ -221,7 +230,7 @@ a {
   color: $grey_2;
 }
 
-.form-control {
+.form-control:not(textarea) {
   @extend .custom_btn;
   @extend .border_1;
 }
