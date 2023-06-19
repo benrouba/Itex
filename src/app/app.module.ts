@@ -13,7 +13,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgChartsModule } from 'ng2-charts';
 
 // ************************************************************************Tools************************************************************************
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { NgOtpInputModule } from 'ng-otp-input';
 // ************************************************************************Guards************************************************************************
 
@@ -36,6 +36,7 @@ import { HeaderComponent } from './reusable/header/header.component';
 import { SideNavComponent } from './reusable/side-nav/side-nav.component';
 import { PatientDetailsComponent } from './components/parent/my-patients/patient-details/patient-details.component';
 import { MessagesComponent } from './components/parent/messages/messages.component';
+import { AppointmentComponent } from './components/parent/appointment/appointment.component';
 import { MessageDetailsComponent } from './components/parent/messages/message-details/message-details.component';
 
 
@@ -64,6 +65,7 @@ const routes: Routes = [
       { path: "dashboard", component: DashboardComponent },
       { path: "medical-history", component: MedicalHistoryComponent },
       { path: "my-patients", component: MyPatientsComponent },
+      { path: "appointment", component: AppointmentComponent },
       {
         path: "messages", component: MessagesComponent, children: [{
           path: "message-details/:id", component: MessageDetailsComponent
@@ -92,7 +94,8 @@ const routes: Routes = [
     SideNavComponent,
     PatientDetailsComponent,
     MessagesComponent,
-    MessageDetailsComponent
+    MessageDetailsComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +108,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     NgChartsModule,
     BsDatepickerModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FullCalendarModule
 
   ],
   providers: [authGuard, { provide: LocationStrategy, useClass: HashLocationStrategy },],
