@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from 'src/app/services/http.service';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-patient-details',
@@ -26,9 +27,10 @@ export class PatientDetailsComponent implements OnInit {
       description: 'Description of Event 3.'
     }
   ];
-  constructor(private http: HttpService, private route: ActivatedRoute) { }
+  constructor(private http: HttpService, private route: ActivatedRoute, private nameService: NameService) { }
   ngOnInit(): void {
     this.getPatientDetails()
+    this.nameService.setTitle('Patient Details')
   }
   getPatientDetails() {
     this.route.params.subscribe(params => {

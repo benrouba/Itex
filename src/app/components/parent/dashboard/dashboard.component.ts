@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { HttpService } from 'src/app/services/http.service';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   labels: any[] = []
   users: any
   bsInlineValue = new Date();
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private nameService: NameService) { }
   options: any = {
     plugins: {
       tooltip: {
@@ -100,6 +101,7 @@ export class DashboardComponent implements OnInit {
   };
   public barChartLegend = false;
   ngOnInit() {
+    this.nameService.setTitle('Dashboard')
     this.getUsers()
     this.data = [{
       data: [12, 19, 3, 5, 2, 3],

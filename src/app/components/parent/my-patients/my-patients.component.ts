@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http.service';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-my-patients',
@@ -8,12 +9,13 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./my-patients.component.scss']
 })
 export class MyPatientsComponent implements OnInit {
-  constructor(private http: HttpService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private http: HttpService, private route: ActivatedRoute, private router: Router, private nameService: NameService) { }
   patients: any
   page: number = 1
   currentPage: any
 
   ngOnInit(): void {
+    this.nameService.setTitle('Patient List')
     this.route.queryParamMap.subscribe(param => {
       if (Number(param.get('page'))) {
         this.currentPage = Number(param.get('page'))

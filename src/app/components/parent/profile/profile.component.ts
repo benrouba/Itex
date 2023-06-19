@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  constructor(private nameService: NameService) { }
   imgUrl: any
   selectedFile: any = null;
   ngOnInit(): void {
@@ -13,7 +15,7 @@ export class ProfileComponent implements OnInit {
   }
   showPreviewImage(event: any,) {
     console.log(event);
-
+    this.nameService.setTitle('Profile')
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
       reader.onload = (event: any) => {

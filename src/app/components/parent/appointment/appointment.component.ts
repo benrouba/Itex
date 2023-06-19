@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarOptions, Calendar } from '@fullcalendar/core';
 import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-appointment',
@@ -8,6 +9,7 @@ import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid';
   styleUrls: ['./appointment.component.scss']
 })
 export class AppointmentComponent implements OnInit {
+  constructor(private nameService: NameService) { }
   calendarOptions: CalendarOptions = {
     plugins: [resourceTimeGridPlugin],
     timeZone: 'PST',
@@ -148,11 +150,12 @@ export class AppointmentComponent implements OnInit {
   };
   ngOnInit(): void {
     console.log(new Date().setHours(8, 0, 0, 0));
-
+    this.nameService.setTitle('Appointment');
   }
   randomcolor() {
     var colors = ["#12BDB2", "#8239BC", "#54A0CA", "#FBB500"]
     var random_color = colors[Math.floor(Math.random() * colors.length)];
     return random_color;
   }
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
+import { NameService } from 'src/app/services/name.service';
 
 @Component({
   selector: 'app-messages',
@@ -10,8 +11,9 @@ export class MessagesComponent implements OnInit {
   users: any
   user: any
   display: boolean = true
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private nameService: NameService) { }
   ngOnInit(): void {
+    this.nameService.setTitle('Messages')
     this.getUsers()
   }
   getUsers() {
