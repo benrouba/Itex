@@ -4,6 +4,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpClient, HttpClientModule, } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 // ************************************************************************ngx bootstrap ************************************************************************
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -100,7 +102,7 @@ const routes: Routes = [
     BrowserAnimationsModule
 
   ],
-  providers: [authGuard],
+  providers: [authGuard, { provide: LocationStrategy, useClass: HashLocationStrategy },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

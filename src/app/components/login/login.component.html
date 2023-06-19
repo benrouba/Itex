@@ -8,14 +8,17 @@
       <div>
         <span class="greyColor f14 poppinsRegular">Enter your account to use healthy 24 service</span>
       </div>
-      <form class="mt-lg-5 mt-3">
+      <form class="mt-lg-5 mt-3" [formGroup]="loginForm">
         <div class="form-group">
           <label for="email" class="poppinsSemiBold f14 deepBlue">Email</label>
-          <input type="email" class="form-control f14" id="email" placeholder="Enter Your email here">
+          <input type="email" class="form-control f14" id="email" formControlName="email"
+            [ngClass]="{'is-invalid': submit &&f['email'].errors}" placeholder="Enter Your email here">
         </div>
         <div class="form-group">
           <label for="password" class="poppinsSemiBold f14 deepBlue">Password</label>
-          <input type="password" class="form-control f14" id="password" placeholder="Enter Your password here">
+          <input type="password" class="form-control f14" id="password"
+            [ngClass]="{'is-invalid': submit &&f['password'].errors}" formControlName="password"
+            placeholder="Enter Your password here">
         </div>
         <div class="d-flex justify-content-between align-items-center">
           <div class="form-group form-check align-items-center d-flex">
@@ -28,7 +31,8 @@
           </div>
         </div>
         <div class="mt-5">
-          <button class="custom_btn signUp btn text-white blueBack poppinsRegular w-100 f14 br_8">Sign In</button>
+          <button class="custom_btn signUp btn text-white blueBack poppinsRegular w-100 f14 br_8" (click)="login()">Sign
+            In</button>
           <div class="my-4 text-center">
             <span class="poppinsRegular f14 blackColor">Or</span>
           </div>
