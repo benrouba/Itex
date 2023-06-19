@@ -37,7 +37,6 @@ import { SideNavComponent } from './reusable/side-nav/side-nav.component';
 import { PatientDetailsComponent } from './components/parent/my-patients/patient-details/patient-details.component';
 import { MessagesComponent } from './components/parent/messages/messages.component';
 import { AppointmentComponent } from './components/parent/appointment/appointment.component';
-import { MessageDetailsComponent } from './components/parent/messages/message-details/message-details.component';
 
 
 const routes: Routes = [
@@ -66,11 +65,7 @@ const routes: Routes = [
       { path: "medical-history", component: MedicalHistoryComponent },
       { path: "my-patients", component: MyPatientsComponent },
       { path: "appointment", component: AppointmentComponent },
-      {
-        path: "messages", component: MessagesComponent, children: [{
-          path: "message-details/:id", component: MessageDetailsComponent
-        }]
-      },
+      { path: "messages", component: MessagesComponent },
       { path: "my-patients/patient-details/:id", component: PatientDetailsComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     ]
@@ -94,7 +89,6 @@ const routes: Routes = [
     SideNavComponent,
     PatientDetailsComponent,
     MessagesComponent,
-    MessageDetailsComponent,
     AppointmentComponent
   ],
   imports: [
